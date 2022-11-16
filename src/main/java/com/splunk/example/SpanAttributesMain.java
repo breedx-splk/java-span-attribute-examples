@@ -38,15 +38,18 @@ public class SpanAttributesMain {
      */
     @WithSpan
     private void parentMethod(int counter) {
-        int bucket = counter % 5; // Quantized to 10 buckets
+        int bucket = counter % 5; // Quantized to 5 buckets
         method2(bucket);
     }
 
     /**
      * Method 2 demonstrates both custom span naming in @WithSpan
      * and also the use of @SpanAttribute to add an attribute
-     * to the span. In this case, the attribute will match
-     * the method argument name "bucket".
+     * to the span. In this case, the attribute name will be taken
+     * from the argument name "bucket". IMPORTANT NOTE: This only
+     * works if javac is invoked with -parameters. See method3()
+     * below for an example of manually specifying the attribute
+     * name.
      */
     @WithSpan("Method Two")
     private void method2(@SpanAttribute int bucket) {
@@ -61,6 +64,7 @@ public class SpanAttributesMain {
      */
     @WithSpan("Method Three")
     private void method3(@SpanAttribute("custom.example.bucket.value") int bucket) {
+        //no-op zzz
     }
 
     /**

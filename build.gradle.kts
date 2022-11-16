@@ -6,6 +6,11 @@ repositories {
     mavenCentral()
 }
 
+tasks.withType<JavaCompile> {
+    val compilerArgs = options.compilerArgs
+    //NOTE: This is required for @P
+    compilerArgs.addAll(listOf("-parameters"))
+}
 application {
     mainClass.set("com.splunk.example.SpanAttributesMain")
     applicationDefaultJvmArgs = listOf(
