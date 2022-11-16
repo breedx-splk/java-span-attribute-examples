@@ -31,7 +31,7 @@ public class SpanAttributesMain {
     }
 
     /**
-     * This is hte root span in the trace. This demonstrates how @WithSpan
+     * This is the root span in the trace. This demonstrates how @WithSpan
      * will automatically pull the name of the method to use as the span
      * name, and will also demonstrate that the method argument is
      * ignored (not included as a span attribute).
