@@ -12,3 +12,6 @@ Example code showing how to add attributes to OpenTelemetry spans.
 
 ## Output
 
+At the top level, we get a nice trace consisting of 5 spans:
+
+<img width="876" alt="image" src="https://user-images.githubusercontent.com/75337021/202268401-4bd88e67-494c-44b4-883a-67ed822853a0.png">
