@@ -75,3 +75,11 @@ This approach is the most flexible, but requires more effort. It's worth noting 
 `code.namespace`, `otel.library.name`, and `otel.library.version` are not added automatically here.
 
 <img width="730" alt="image" src="https://user-images.githubusercontent.com/75337021/202269123-bdb69cb4-5d26-4ffa-9ef9-8034c7e9f2de.png">
+
+## Metricizing Span Attributes
+
+Now that we've created some span data with our custom bucket attribute, we can create metrics for it.
+
+<img width="919" alt="image" src="https://user-images.githubusercontent.com/75337021/202287024-3946dab0-ec50-4d67-9e76-6ef4e63afa0e.png">
+
+As you can see, we can compare times for each bucket (which in our contrived example is not exciting) or graph them to do additional analysis.
