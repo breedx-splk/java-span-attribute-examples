@@ -51,7 +51,8 @@ on the span unless you give it a name (see method 3 below).
 
 ### Method 3
 
-Method 3 is similar to `Method Two` but it customizes the attribute name. Instead of `bucket` it has specified `custom.example.bucket.value`.
+Method 3 is similar to `Method Two` but it customizes the attribute name. Instead of `bucket`, it has specified `custom.example.bucket.value`
+by passing an argument to the `@SpanAttribute` annotation.
 
 <img width="727" alt="image" src="https://user-images.githubusercontent.com/75337021/202268983-3b70bf49-d906-4f5d-abc2-0948e8bbe6cf.png">
 
