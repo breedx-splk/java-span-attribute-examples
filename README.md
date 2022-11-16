@@ -78,6 +78,10 @@ This approach is the most flexible, but requires more effort. It's worth noting 
 
 ## Metricizing Span Attributes
 
+From Tag Spotlight, you can click "New MetricSet" to define a new metric set for our custom attribute:
+
+<img width="627" alt="image" src="https://user-images.githubusercontent.com/75337021/202287440-d07e0573-3d01-4dab-a99b-9f58b215f9de.png">
+
 Now that we've created some span data with our custom bucket attribute, we can create metrics for it.
 
 <img width="919" alt="image" src="https://user-images.githubusercontent.com/75337021/202287024-3946dab0-ec50-4d67-9e76-6ef4e63afa0e.png">
