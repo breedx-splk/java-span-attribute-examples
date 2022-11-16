@@ -66,4 +66,10 @@ Span.current().setAttribute("special.bucket.value", bucket);
 
 ### Method 5
 
+Span 5 is created entirely with manual instrumentation. The span name (`method 5`) and custom attribute name (`method5.bucket.value`) are
+both generated with java code manually written into the method. 
+
+This approach is the most flexible, but requires more effort. It's worth noting that the instrumentation tags like `code.function`,
+`code.namespace`, `otel.library.name`, and `otel.library.version` are not added automatically here.
+
 <img width="730" alt="image" src="https://user-images.githubusercontent.com/75337021/202269123-bdb69cb4-5d26-4ffa-9ef9-8034c7e9f2de.png">
