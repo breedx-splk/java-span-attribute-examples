@@ -10,6 +10,8 @@ Example code showing how to add attributes to OpenTelemetry spans.
 ./gradlew run
 ```
 
+Note: Java instrumentation debug logging is enabled, so it's fairly verbose.
+
 ## Output
 
 At the top level, we get a nice trace consisting of 5 spans:
