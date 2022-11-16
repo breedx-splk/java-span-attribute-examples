@@ -18,7 +18,15 @@ At the top level, we get a nice trace consisting of 5 spans:
 
 Let's dive a little deeper into each one:
 
-### Parent Method (topmost span)
+### Parent Method (root span)
+
+We see that the root span attained its name from the simple use of the `@WithSpan` attribute. 
+The operation name is `SpanAttributesMain.parentMethod` which is automatically derived from the 
+name of the class and the name of the method being instrumented.
+
+In the list of tags (OpenTelemtry attributes) you will notice `code.function` and `code.namespace`,
+which are standard [OpenTelmetry semantic conventions](https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/span-general.md#source-code-attributes)
+for source code.
 
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/75337021/202268737-6206d1ca-c6bb-4b60-a480-44167e5220b5.png">
 
