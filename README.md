@@ -49,9 +49,18 @@ on the span unless you give it a name (see method 3 below).
 
 ### Method 3
 
+Method 3 is similar to `Method Two` but it customizes the attribute name. Instead of `bucket` it has specified `custom.example.bucket.value`.
+
 <img width="727" alt="image" src="https://user-images.githubusercontent.com/75337021/202268983-3b70bf49-d906-4f5d-abc2-0948e8bbe6cf.png">
 
 ### Method 4
+
+Method 4 falls back to the generic `@WithSpan` naming but has manually added an attribute to the currently scoped span *with code*.
+
+The code to do this looks like this:
+```
+Span.current().setAttribute("special.bucket.value", bucket);
+```
 
 <img width="724" alt="image" src="https://user-images.githubusercontent.com/75337021/202269057-9ba0bef5-73ed-4672-88ae-dc883c543181.png">
 
