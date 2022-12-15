@@ -14,7 +14,7 @@ tasks.withType<JavaCompile> {
 application {
     mainClass.set("com.splunk.example.SpanAttributesMain")
     applicationDefaultJvmArgs = listOf(
-        "-javaagent:splunk-otel-javaagent-1.17.0.jar",
+        "-javaagent:splunk-otel-javaagent-1.18.0.jar",
         "-Dotel.javaagent.debug=true",
         "-Dotel.service.name=SpanAttrExample"
     )
