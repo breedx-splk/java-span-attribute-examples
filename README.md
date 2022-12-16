@@ -98,7 +98,8 @@ on certain classes. In our case, we have asked the agent to create spans for bot
 In the implementation of `highScore()` we have manually obtained the active span in order ot set the 
 bucket attribute. In the tracing view, it ends up looking like this:
 
-tbd
+<img width="774" alt="image" src="https://user-images.githubusercontent.com/75337021/208167962-c2c34c84-835e-4b25-8ddd-d16f029372d4.png">
+
 
 ## Metricizing Span Attributes
 
