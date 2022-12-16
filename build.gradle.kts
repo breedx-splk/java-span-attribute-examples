@@ -16,7 +16,8 @@ application {
     applicationDefaultJvmArgs = listOf(
         "-javaagent:splunk-otel-javaagent-1.18.0.jar",
         "-Dotel.javaagent.debug=true",
-        "-Dotel.service.name=SpanAttrExample"
+        "-Dotel.service.name=SpanAttrExample",
+        "-Dotel.instrumentation.methods.include=com.splunk.example.SpanAttributesMain[superDuperBonusMethod,highScore]"
     )
 }
 
