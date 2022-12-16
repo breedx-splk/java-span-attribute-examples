@@ -91,7 +91,7 @@ a system property: `otel.instrumentation.methods.include`:
 ```
 
 [This property](https://opentelemetry.io/docs/instrumentation/java/automatic/annotations/#creating-spans-around-methods-with-otelinstrumentationmethodsinclude)
-allows us to tell the java instrumentation agent to automatically create spans for certain methods
+tells the java instrumentation agent to automatically create spans for certain methods
 on certain classes. In our case, we have asked the agent to create spans for both the `superDuperBonusMethod` and 
 `highScore` methods on the `SpanAttributesMain` class.
 
