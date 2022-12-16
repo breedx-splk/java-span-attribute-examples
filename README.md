@@ -77,6 +77,30 @@ This approach is the most flexible, but requires more effort. It's worth noting 
 
 <img width="730" alt="image" src="https://user-images.githubusercontent.com/75337021/202269123-bdb69cb4-5d26-4ffa-9ef9-8034c7e9f2de.png">
 
+### Bonus method!
+
+Because we're showing several approaches to manual instrumentation, why not include
+one more? This approach uses a built-in feature of the java agent and doesn't actually 
+require making any code changes.
+
+If you peek in the [`build.gradle.kts`](build.gradle.kts) file, you'll see that we have added
+a system property: `otel.instrumentation.methods.include`:
+
+```
+-Dotel.instrumentation.methods.include=com.splunk.example.SpanAttributesMain[superDuperBonusMethod,highScore]
+```
+
+[This property](https://opentelemetry.io/docs/instrumentation/java/automatic/annotations/#creating-spans-around-methods-with-otelinstrumentationmethodsinclude)
+tells the java instrumentation agent to automatically create spans for certain methods
+on certain classes. In our case, we have asked the agent to create spans for both the `superDuperBonusMethod` and 
+`highScore` methods on the `SpanAttributesMain` class.
+
+In the implementation of `highScore()` we have manually obtained the active span in order ot set the 
+bucket attribute. In the tracing view, it ends up looking like this:
+
+<img width="774" alt="image" src="https://user-images.githubusercontent.com/75337021/208167962-c2c34c84-835e-4b25-8ddd-d16f029372d4.png">
+
+
 ## Metricizing Span Attributes
 
 From Tag Spotlight, you can click "New MetricSet" to define a new metric set for our custom attribute:

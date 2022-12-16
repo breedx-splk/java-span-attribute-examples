@@ -56,6 +56,7 @@ public class SpanAttributesMain {
         method3(bucket);
         method4(bucket);
         method5(bucket);
+        superDuperBonusMethod(bucket);
     }
 
     /**
@@ -98,6 +99,15 @@ public class SpanAttributesMain {
         } finally {
             span.end();
         };
+    }
+
+    private void superDuperBonusMethod(int bucket) {
+        highScore(bucket);
+    }
+
+    private void highScore(int bucket) {
+        System.out.println("You got the top score! " + bucket);
+        Span.current().setAttribute("bucket", bucket);
     }
 
 
