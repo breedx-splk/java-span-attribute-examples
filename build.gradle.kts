@@ -8,7 +8,7 @@ repositories {
 
 tasks.withType<JavaCompile> {
     val compilerArgs = options.compilerArgs
-    //NOTE: This is required for @P
+    //NOTE: This is required for custom @SpanAttribute names
     compilerArgs.addAll(listOf("-parameters"))
 }
 application {
@@ -22,5 +22,5 @@ application {
 }
 
 dependencies {
-    implementation("io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:1.19.2-alpha")
+    implementation("io.opentelemetry.instrumentation:opentelemetry-instrumentation-annotations:1.23.0")
 }
